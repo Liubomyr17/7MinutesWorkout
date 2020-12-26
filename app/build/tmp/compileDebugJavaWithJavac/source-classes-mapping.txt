@@ -1,0 +1,2 @@
+com/sevenminuteworkout/BuildConfig.java
+ com.sevenminuteworkout.BuildConfig
