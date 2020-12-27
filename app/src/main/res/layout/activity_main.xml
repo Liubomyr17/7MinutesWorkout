@@ -8,16 +8,9 @@
     android:padding="@dimen/main_screen_main_layout_padding"
     tools:context=".MainActivity">
 
-    <!--TODO(Step 1 - Adding an image and custom start button)-->
-    <!--Here we have added a list of points
-    1. Added padding to MainLayout which is defined in the dimen.xml file.
-    2. Added an Image to the main layout.
-    3. Added a custom start button with background border.
-    4. Custom border is added in drawable folder.-->
-
     <!--In ImageView we have done :
-        1. Static height is defined.
-        2. ImageContentDescription is defined in string.xml file. Which defines text that briefly describes content of the view. This property is used
+        1. Static height is defined in .
+        2. ImageContentDescription is defined in string.xml file. Which Defines text that briefly describes content of the view. This property is used
              primarily for accessibility. Since some views do not have textual
              representation this attribute can be used for providing such.
         3. An image is added in drawable folder and Sets a drawable as the content of this ImageView.-->
@@ -28,11 +21,11 @@
         android:src="@drawable/img_main_page" />
 
     <!--For adding the custom start Button.
-        1. Adding a Linear Layout with custom background which is defined in Drawable Folder.
-        2. Adding a static size as width and height of layout.
-        3. Adding a TextView for labeling along with the text.
+        1. Adding an Linear Layout with custom background which is defined in Drawable Folder.
+        2. Adding an static size as width and height of layout.
+        3. Adding an TextView for labeling along with the text.
         4. Adding designing features like giving margin, adding gravity, textColor, textSize, textStyle.
-       -->
+        5. Here textColor used is defined in the color.xml.-->
     <LinearLayout
         android:id="@+id/llStart"
         android:layout_width="150dp"

@@ -632,10 +632,8 @@ color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
 color colorAccent
-color colorHighLighted
 color colorPrimary
 color colorPrimaryDark
-color colorWhite
 color design_bottom_navigation_shadow_color
 color design_default_color_primary
 color design_default_color_primary_dark
@@ -719,7 +717,6 @@ color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
-color toolbar_color_control_normal
 color tooltip_background_dark
 color tooltip_background_light
 dimen abc_action_bar_content_inset_material
@@ -1037,6 +1034,8 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable circular_progress_bar
+drawable circular_progress_gray
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1049,6 +1048,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable img_main_page
+drawable item_circular_color_accent_background
 drawable item_circular_color_accent_border
 drawable item_color_accent_border_ripple_background
 drawable mtrl_snackbar_background
@@ -1198,6 +1198,7 @@ id line1
 id line3
 id listMode
 id list_item
+id llRestView
 id llStart
 id masked
 id message
@@ -1223,6 +1224,7 @@ id parentPanel
 id parent_matrix
 id percent
 id pin
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio
@@ -1302,6 +1304,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tvTimer
 id unchecked
 id uniform
 id unlabeled
@@ -1819,7 +1822,6 @@ style ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox
 style ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense
 style ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox
 style ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense
-style ToolbarTheme
 style Widget_AppCompat_ActionBar
 style Widget_AppCompat_ActionBar_Solid
 style Widget_AppCompat_ActionBar_TabBar
