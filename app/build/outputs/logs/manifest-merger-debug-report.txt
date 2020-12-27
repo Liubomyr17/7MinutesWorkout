@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:2:1-27:12
+ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:2:1-32:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\3d6fb767d610145f93b6419bdbe6a54d\material-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\a0df8aa46d15bef6d531d21ede0e97e2\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core-ktx:1.2.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\dd737f1cfebb28cb291ab8bad2c1aae2\jetified-core-ktx-1.2.0\AndroidManifest.xml:2:1-9:12
@@ -39,27 +39,27 @@ MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\user\.gradle\caches\
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\460fbb6ec86ae4ad508e850c617f8481\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\aa2d766b79264412c1842174db8ba3d4\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\59a79beb8e961081956611a36cfde451\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:2:1-32:12
 	package
 		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:4:5-37
 		INJECTED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml
 		INJECTED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:2:1-27:12
+		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:2:1-32:12
 		INJECTED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:2:1-27:12
+		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:2:1-32:12
 		INJECTED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:6:5-25:19
+ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:6:5-30:19
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\3d6fb767d610145f93b6419bdbe6a54d\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\3d6fb767d610145f93b6419bdbe6a54d\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\user\.gradle\caches\transforms-2\files-2.1\1a64615e3aee6007444711718719d0cf\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
@@ -84,26 +84,34 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\us
 		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:7:9-36
 	android:theme
 		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:12:9-40
-activity#com.sevenminuteworkout.MainActivity
-ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:14:9-24:20
+activity#com.sevenminuteworkout.ExerciseActivity
+ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:14:9-18:20
 	android:screenOrientation
-		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:17:13-49
-	android:label
-		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:16:13-45
+		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:15:13-49
 	android:theme
-		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:18:13-69
+		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:16:13-63
 	android:name
-		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:15:13-41
+		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:14:19-51
+activity#com.sevenminuteworkout.MainActivity
+ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:19:9-29:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:22:13-49
+	android:label
+		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:21:13-45
+	android:theme
+		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:23:13-69
+	android:name
+		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:20:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:19:13-23:29
+ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:24:13-28:29
 action#android.intent.action.MAIN
-ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:20:17-69
+ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:20:25-66
+		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:22:17-77
+ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:22:27-74
+		ADDED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:27:27-74
 uses-sdk
 INJECTED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml

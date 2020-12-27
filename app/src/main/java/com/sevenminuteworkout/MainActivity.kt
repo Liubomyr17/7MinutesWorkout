@@ -1,5 +1,6 @@
 package com.sevenminuteworkout
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -20,11 +21,8 @@ class MainActivity : AppCompatActivity() {
         //START
         // Click event for start Button which we have created in XML.
         llStart.setOnClickListener {
-            Toast.makeText(
-                this@MainActivity,
-                "Here we will start the exercise.",
-                Toast.LENGTH_SHORT
-            ).show()
+            val intent = Intent(this, ExerciseActivity::class.java)
+            startActivity(intent)
         }
         // END
     }

@@ -64,6 +64,10 @@
         "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\drawable\\img_main_page.png"
     },
     {
+        "merged": "D:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_exercise.xml.flat",
+        "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\layout\\activity_exercise.xml"
+    },
+    {
         "merged": "D:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
