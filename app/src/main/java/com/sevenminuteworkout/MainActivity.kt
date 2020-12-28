@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
 
         // Click event for start Button which we have created in XML.
         llStart.setOnClickListener {
-            //TODO(Step 11 - On Start button click navigate it to the Exercise Activity.)
             //START
             val intent = Intent(this, ExerciseActivity::class.java)
             startActivity(intent)

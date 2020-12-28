@@ -1036,7 +1036,6 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable circular_progress_bar
 drawable circular_progress_gray
-drawable content_main
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1199,6 +1198,7 @@ id line1
 id line3
 id listMode
 id list_item
+id llExerciseView
 id llRestView
 id llStart
 id masked
@@ -1226,6 +1226,7 @@ id parent_matrix
 id percent
 id pin
 id progressBar
+id progressBarExercise
 id progress_circular
 id progress_horizontal
 id radio
@@ -1305,6 +1306,8 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tvExerciseName
+id tvExerciseTimer
 id tvTimer
 id unchecked
 id uniform
