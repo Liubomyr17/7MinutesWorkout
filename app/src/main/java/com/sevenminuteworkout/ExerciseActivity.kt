@@ -62,6 +62,9 @@ class ExerciseActivity : AppCompatActivity() {
         }.start()
     }
     private fun setupRestView() {
+        llRestView.visibility = View.VISIBLE
+        llExerciseView.visibility = View.GONE
+
         if (restTimer != null) {
             restTimer!!.cancel()
             restProgress = 0
@@ -78,10 +81,15 @@ class ExerciseActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                Toast.makeText(this@ExerciseActivity,
-                    "Here now we will start the next rest screen",
-                    Toast.LENGTH_SHORT
-                ).show()
+                if (currentExercisePosition < exerciseList?.size!! - 1) {
+                    setupRestView()
+                } else {
+                    Toast.makeText(
+                            this@ExerciseActivity,
+                            "Congratulations! You have completed the 7 minutes workout!",
+                            Toast.LENGTH_SHORT
+                    ).show()
+                }
             }
         }.start()
     }
@@ -95,5 +103,8 @@ class ExerciseActivity : AppCompatActivity() {
             exerciseProgress = 0
         }
         setExerciseProgressBar()
+
+        ivImage.setImageResource(exerciseList!![currentExercisePosition].getImage())
+        tvExerciseName.text = exerciseList!![currentExercisePosition].getName()
     }
 }

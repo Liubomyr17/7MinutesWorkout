@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--TODO(Step 3 - This is added by Default when you create new Activity and can add the components as per requirement.)-->
-<!--START-->
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,17 +11,12 @@
     respective folder as in DRAWABLE, VALUES of (color.xml, dimen.xml, string.xml).
     -->
 
-    <!--TODO(Step 4 - Adding a toolbar to display a title)-->
-    <!--Step 4 START-->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_exercise_activity"
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
         android:background="#FFFFFF" />
-    <!--Step 4 END-->
 
-    <!--TODO(Step 6 - Adding a view for the Get Ready Screen with a progress bar and remaining time text for the timer.)-->
-    <!--Step 6 START-->
     <LinearLayout
         android:id="@+id/llRestView"
         android:layout_width="match_parent"
@@ -30,7 +24,8 @@
         android:layout_below="@id/toolbar_exercise_activity"
         android:gravity="center"
         android:orientation="vertical"
-        android:visibility="visible">
+        android:visibility="visible"
+        tools:visibility="gone">
 
         <TextView
             android:layout_width="wrap_content"
@@ -77,16 +72,30 @@
             </LinearLayout>
         </FrameLayout>
     </LinearLayout>
-    <!--Step 6 END-->
+
     <LinearLayout
         android:id="@+id/llExerciseView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/toolbar_exercise_activity"
-        android:gravity="center"
+        android:gravity="bottom|center_horizontal"
         android:orientation="vertical"
         android:visibility="gone"
         tools:visibility="visible">
+
+        <!--Gravity of exercise view is changed which is above.-->
+
+        <!--TODO (Step 1 - First add the images to the Drawable folder and adding an imageview to show which is the current exercise along with the Name.)-->
+        <!--START-->
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/image"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_jumping_jacks" />
+        <!--END-->
 
         <TextView
             android:id="@+id/tvExerciseName"
@@ -94,13 +103,14 @@
             android:layout_height="wrap_content"
             android:text="Exercise Name"
             android:textColor="@color/colorAccent"
-            android:textSize="22sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <FrameLayout
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
             android:background="@drawable/item_circular_color_accent_border">
 
             <ProgressBar
@@ -134,5 +144,4 @@
             </LinearLayout>
         </FrameLayout>
     </LinearLayout>
-
-</RelativeLayout><!--END-->
+</RelativeLayout>
