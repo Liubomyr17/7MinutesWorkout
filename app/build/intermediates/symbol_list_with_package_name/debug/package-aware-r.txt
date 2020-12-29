@@ -1148,6 +1148,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btnSpeak
 id buttonPanel
 id center
 id center_horizontal
@@ -1180,6 +1181,7 @@ id edit_query
 id end
 id enterAlways
 id enterAlwaysCollapsed
+id etEnteredText
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1389,6 +1391,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_exercise
 layout activity_main
+layout content_main
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

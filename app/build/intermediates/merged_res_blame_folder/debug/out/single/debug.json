@@ -84,6 +84,10 @@
         "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\drawable-v24\\ic_wall_sit.png"
     },
     {
+        "merged": "D:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_main.xml.flat",
+        "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\layout\\content_main.xml"
+    },
+    {
         "merged": "D:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
@@ -100,12 +104,12 @@
         "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circular_progress_gray.xml.flat",
-        "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\drawable\\circular_progress_gray.xml"
-    },
-    {
         "merged": "D:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_push_up_and_rotation.png.flat",
         "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\drawable-v24\\ic_push_up_and_rotation.png"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circular_progress_gray.xml.flat",
+        "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\drawable\\circular_progress_gray.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_side_plank.png.flat",

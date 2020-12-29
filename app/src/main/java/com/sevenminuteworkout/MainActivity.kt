@@ -3,6 +3,7 @@ package com.sevenminuteworkout
 import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.speech.tts.TextToSpeech
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -28,7 +29,5 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             //END
         }
-
-
     }
 }

@@ -2,13 +2,16 @@ package com.sevenminuteworkout
 
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.speech.tts.TextToSpeech
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_exercise.*
+import java.util.*
+import kotlin.collections.ArrayList
 
-//TODO(Step 1 - Add an ExerciseActivity.)-->
-class ExerciseActivity : AppCompatActivity() {
+class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     private var restTimer: CountDownTimer? = null
     private var restProgress = 0
@@ -20,11 +23,12 @@ class ExerciseActivity : AppCompatActivity() {
     private var exerciseList: ArrayList<ExerciseModel> ?= null
     private var currentExercisePosition = -1
 
+    private var tts: TextToSpeech? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercise)
 
-        //TODO(Step 5 - Setting up the action bar using the toolbar and adding a back arrow button to it.)-->
         //START
         setSupportActionBar(toolbar_exercise_activity)
         val actionbar = supportActionBar
@@ -34,6 +38,8 @@ class ExerciseActivity : AppCompatActivity() {
         toolbar_exercise_activity.setNavigationOnClickListener {
             onBackPressed()
         }
+
+        tts = TextToSpeech(this, this)
 
         exerciseList = Constants.defaultExerciseList()
 
@@ -45,6 +51,16 @@ class ExerciseActivity : AppCompatActivity() {
             restTimer!!.cancel()
             restProgress = 0
         }
+        if(exerciseTimer != null) {
+            exerciseTimer!!.cancel()
+            exerciseProgress = 0
+        }
+
+        if (tts!= null) {
+            tts!!.stop()
+            tts!!.shutdown()
+        }
+
         super.onDestroy()
     }
     private fun setRestProgressBar() {
@@ -104,9 +120,26 @@ class ExerciseActivity : AppCompatActivity() {
             exerciseTimer!!.cancel()
             exerciseProgress = 0
         }
+
+        speakOut(exerciseList!![currentExercisePosition].getName())
+
         setExerciseProgressBar()
 
         ivImage.setImageResource(exerciseList!![currentExercisePosition].getImage())
         tvExerciseName.text = exerciseList!![currentExercisePosition].getName()
+    }
+
+    override fun onInit(status: Int) {
+        if (status == TextToSpeech.SUCCESS) {
+            val result = tts!!.setLanguage(Locale.US)
+            if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                Log.e("TTS", "The Language specified is not supported")
+        }
+    } else {
+        Log.e("TTS", "Initialization Failed!")
+    }
+}
+    private fun speakOut(text: String) {
+        tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null, "")
     }
 }
