@@ -6,11 +6,6 @@
     android:orientation="vertical"
     tools:context=".ExerciseActivity">
 
-    <!--Here we have added list of points
-    1. Added required custom background layout, text, color, size in
-    respective folder as in DRAWABLE, VALUES of (color.xml, dimen.xml, string.xml).
-    -->
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_exercise_activity"
         android:layout_width="match_parent"
@@ -157,4 +152,13 @@
             </LinearLayout>
         </FrameLayout>
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvExerciseStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp" />
+
 </RelativeLayout>

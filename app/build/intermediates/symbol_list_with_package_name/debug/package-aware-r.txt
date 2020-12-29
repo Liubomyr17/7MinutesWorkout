@@ -1062,6 +1062,7 @@ drawable ic_wall_sit
 drawable img_main_page
 drawable item_circular_color_accent_background
 drawable item_circular_color_accent_border
+drawable item_circular_color_grey_background
 drawable item_color_accent_border_ripple_background
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
@@ -1246,6 +1247,7 @@ id radio
 id right
 id right_icon
 id right_side
+id rvExerciseStatus
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1321,6 +1323,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id tvExerciseName
 id tvExerciseTimer
+id tvItem
 id tvTimer
 id tvUpcomingExerciseName
 id unchecked
@@ -1404,6 +1407,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout item_exercise_status
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
