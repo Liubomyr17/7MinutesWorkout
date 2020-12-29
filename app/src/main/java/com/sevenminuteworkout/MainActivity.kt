@@ -2,12 +2,8 @@ package com.sevenminuteworkout
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.CountDownTimer
-import android.speech.tts.TextToSpeech
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_exercise.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -21,13 +17,10 @@ class MainActivity : AppCompatActivity() {
         // This is used to align the xml view to this class
         setContentView(R.layout.activity_main)
 
-
         // Click event for start Button which we have created in XML.
         llStart.setOnClickListener {
-            //START
             val intent = Intent(this, ExerciseActivity::class.java)
             startActivity(intent)
-            //END
         }
     }
 }

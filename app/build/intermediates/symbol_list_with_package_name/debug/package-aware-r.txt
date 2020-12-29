@@ -1148,7 +1148,6 @@ id barrier
 id beginning
 id blocking
 id bottom
-id btnSpeak
 id buttonPanel
 id center
 id center_horizontal
@@ -1181,7 +1180,6 @@ id edit_query
 id end
 id enterAlways
 id enterAlwaysCollapsed
-id etEnteredText
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1391,7 +1389,6 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_exercise
 layout activity_main
-layout content_main
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1421,6 +1418,7 @@ layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
+raw press_start
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -1465,7 +1463,6 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
-string str_start
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

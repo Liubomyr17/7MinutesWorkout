@@ -23,13 +23,10 @@
             </intent-filter>
         </activity>
 
-        <!--TODO(Step 2 - This is added by Default when you create new Activity and can be modified as per your requirement.)-->
-        <!--START-->
         <activity
             android:name=".ExerciseActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <!--END-->
     </application>
 
 </manifest>

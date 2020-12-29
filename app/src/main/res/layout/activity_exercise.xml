@@ -25,7 +25,7 @@
         android:gravity="center"
         android:orientation="vertical"
         android:visibility="visible"
-        tools:visibility="gone">
+        tools:visibility="visible">
 
         <TextView
             android:layout_width="wrap_content"
@@ -77,18 +77,17 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="UPCOMING EXERCISE : "
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tvUpcomingExerciseName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:textColor="@color/colorPrimary"
+            android:textColor="#212121"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:text="Exercise Name" />
+            tools:text="Exercise Name" />
 
     </LinearLayout>
 
@@ -100,12 +99,8 @@
         android:gravity="bottom|center_horizontal"
         android:orientation="vertical"
         android:visibility="gone"
-        tools:visibility="visible">
+        tools:visibility="gone">
 
-        <!--Gravity of exercise view is changed which is above.-->
-
-        <!--TODO (Step 1 - First add the images to the Drawable folder and adding an imageview to show which is the current exercise along with the Name.)-->
-        <!--START-->
         <ImageView
             android:id="@+id/ivImage"
             android:layout_width="match_parent"
@@ -114,7 +109,6 @@
             android:contentDescription="@string/image"
             android:scaleType="fitXY"
             android:src="@drawable/ic_jumping_jacks" />
-        <!--END-->
 
         <TextView
             android:id="@+id/tvExerciseName"
