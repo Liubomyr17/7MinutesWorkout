@@ -1322,6 +1322,7 @@ id transition_transform
 id tvExerciseName
 id tvExerciseTimer
 id tvTimer
+id tvUpcomingExerciseName
 id unchecked
 id uniform
 id unlabeled
