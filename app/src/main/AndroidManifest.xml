@@ -27,6 +27,16 @@
             android:name=".ExerciseActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <!--TODO(Step 2 : Update the activity attribute as per requirement.)-->
+        <!--START-->
+        <!--This tag is already added by default when you create an activity along with the layout file.
+        You just need add some extra attributes as per requirement.-->
+        <activity
+            android:name=".FinishActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <!--END-->
     </application>
 
 </manifest>

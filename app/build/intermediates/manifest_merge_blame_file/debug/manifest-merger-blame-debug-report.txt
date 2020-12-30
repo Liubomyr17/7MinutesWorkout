@@ -11,7 +11,7 @@
 9-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:6:5-30:19
+11-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:6:5-40:19
 12        android:allowBackup="false"
 12-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:7:9-36
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -57,6 +57,22 @@
 34-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:28:13-49
 35            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 35-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:29:13-69
-36    </application>
-37
-38</manifest>
+36
+37        <!-- TODO(Step 2 : Update the activity attribute as per requirement.) -->
+38        <!-- START -->
+39        <!--
+40        This tag is already added by default when you create an activity along with the layout file.
+41        You just need add some extra attributes as per requirement.
+42        -->
+43        <activity
+43-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:35:9-38:72
+44            android:name="com.sevenminuteworkout.FinishActivity"
+44-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:36:13-43
+45            android:screenOrientation="portrait"
+45-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:37:13-49
+46            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+46-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:38:13-69
+47        <!-- END -->
+48    </application>
+49
+50</manifest>

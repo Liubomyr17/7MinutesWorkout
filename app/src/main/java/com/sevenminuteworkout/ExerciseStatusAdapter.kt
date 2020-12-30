@@ -44,20 +44,27 @@ class ExerciseStatusAdapter(val items: ArrayList<ExerciseModel>, val context: Co
 
         holder.tvItem.text = model.getId().toString()
 
-        if(model.getIsSelected()) {
+        // Updating the background and text color according to the flags what is in the list.
+        // A link to set text color programmatically and same way we can set the drawable background also instead of color.
+        // https://stackoverflow.com/questions/8472349/how-to-set-text-color-to-a-text-view-programmatically
+        if (model.getIsSelected()) {
             holder.tvItem.background =
-                    ContextCompat.getDrawable(context, R.drawable.item_circular_thin_color_accent_border)
-            holder.tvItem.setTextColor(Color.parseColor("#212121"))
-        } else if(model.getIsCompleted()) {
+                ContextCompat.getDrawable(
+                    context,
+                    R.drawable.item_circular_thin_color_accent_border
+                )
+            holder.tvItem.setTextColor(Color.parseColor("#212121")) // Parse the color string, and return the corresponding color-int.
+        } else if (model.getIsCompleted()) {
             holder.tvItem.background =
-                    ContextCompat.getDrawable(context, R.drawable.item_circular_color_accent_background)
-        holder.tvItem.setTextColor(Color.parseColor("#FFFFFF"))
-    } else {
+                ContextCompat.getDrawable(context, R.drawable.item_circular_color_accent_background)
+            holder.tvItem.setTextColor(Color.parseColor("#FFFFFF"))
+        } else {
             holder.tvItem.background =
-                    ContextCompat.getDrawable(context, R.drawable.item_circular_color_gray_background)
+                ContextCompat.getDrawable(context, R.drawable.item_circular_color_gray_background)
             holder.tvItem.setTextColor(Color.parseColor("#212121"))
         }
     }
+
     /**
      * Gets the number of items in the list
      */
