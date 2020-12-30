@@ -1329,8 +1329,10 @@ id tvEnd
 id tvExerciseName
 id tvExerciseTimer
 id tvItem
+id tvNo
 id tvTimer
 id tvUpcomingExerciseName
+id tvYes
 id unchecked
 id uniform
 id unlabeled
@@ -1413,6 +1415,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout dialog_custom_back_confirmation
 layout item_exercise_status
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
