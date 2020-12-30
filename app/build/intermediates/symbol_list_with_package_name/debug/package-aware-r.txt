@@ -1151,6 +1151,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btnCalculateUnits
 id btnFinish
 id buttonPanel
 id center
@@ -1184,6 +1185,8 @@ id edit_query
 id end
 id enterAlways
 id enterAlwaysCollapsed
+id etMetricUnitHeight
+id etMetricUnitWeight
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1216,9 +1219,11 @@ id line3
 id listMode
 id list_item
 id llBMI
+id llDiplayBMIResult
 id llExerciseView
 id llRestView
 id llStart
+id llUnitsView
 id masked
 id message
 id middle
@@ -1312,6 +1317,8 @@ id text_input_password_toggle
 id textinput_counter
 id textinput_error
 id textinput_helper_text
+id tilMetricUnitHeight
+id tilMetricUnitWeight
 id time
 id title
 id titleDividerNoCustom
@@ -1327,6 +1334,9 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tvBMIDescription
+id tvBMIType
+id tvBMIValue
 id tvEnd
 id tvExerciseName
 id tvExerciseTimer
@@ -1335,6 +1345,7 @@ id tvNo
 id tvTimer
 id tvUpcomingExerciseName
 id tvYes
+id tvYourBMI
 id unchecked
 id uniform
 id unlabeled
@@ -1399,7 +1410,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_b_m_i
+layout activity_bmi
 layout activity_exercise
 layout activity_finish
 layout activity_main

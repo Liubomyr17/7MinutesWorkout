@@ -75,5 +75,4 @@
             android:textSize="22sp"
             android:textStyle="bold" />
     </LinearLayout>
-    <!--END-->
 </LinearLayout>

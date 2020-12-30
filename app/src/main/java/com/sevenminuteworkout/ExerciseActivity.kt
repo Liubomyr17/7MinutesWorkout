@@ -263,16 +263,22 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener  {
         rvExerciseStatus.adapter = exerciseAdapter
     }
 
+    /**
+     * Function is used to launch the custom confirmation dialog.
+     */
     private fun customDialogForBackButton() {
         val customDialog = Dialog(this)
+        /*Set the screen content from a layout resource.
+         The resource will be inflated, adding all top-level views to the screen.*/
         customDialog.setContentView(R.layout.dialog_custom_back_confirmation)
         customDialog.tvYes.setOnClickListener {
             finish()
-            customDialog.dismiss()
+            customDialog.dismiss() // Dialog will be dismissed
         }
         customDialog.tvNo.setOnClickListener {
             customDialog.dismiss()
         }
+        //Start the dialog and display it on screen.
         customDialog.show()
     }
 }

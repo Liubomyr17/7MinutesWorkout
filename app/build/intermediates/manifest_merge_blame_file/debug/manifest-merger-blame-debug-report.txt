@@ -11,7 +11,7 @@
 9-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:6:5-42:19
+11-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:6:5-44:19
 12        android:allowBackup="false"
 12-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:7:9-36
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -29,55 +29,60 @@
 20        android:theme="@style/AppTheme" >
 20-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:12:9-40
 21        <activity
-21-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:14:9-17:15
-22            android:name="com.sevenminuteworkout.BMIActivity"
-22-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:14:19-46
-23            android:screenOrientation="portrait"
-23-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:15:13-49
-24            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-24-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:16:13-69
-25        <activity
-25-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:18:9-28:20
-26            android:name="com.sevenminuteworkout.MainActivity"
-26-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:19:13-41
-27            android:label="@string/app_name"
-27-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:20:13-45
-28            android:screenOrientation="portrait"
-28-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:21:13-49
-29            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-29-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:22:13-69
-30            <intent-filter>
-30-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:23:13-27:29
-31                <action android:name="android.intent.action.MAIN" />
-31-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:24:17-69
-31-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:24:25-66
-32
-33                <category android:name="android.intent.category.LAUNCHER" />
-33-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:26:17-77
-33-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:26:27-74
-34            </intent-filter>
-35        </activity>
-36        <activity
-36-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:29:9-32:72
-37            android:name="com.sevenminuteworkout.ExerciseActivity"
-37-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:30:13-45
-38            android:screenOrientation="portrait"
-38-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:31:13-49
-39            android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> <!-- TODO(Step 2 : Update the activity attribute as per requirement.) -->
-39-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:32:13-69
-40        <!-- START -->
-41        <!--
-42This tag is already added by default when you create an activity along with the layout file.
-43        You just need add some extra attributes as per requirement.
-44        -->
-45        <activity
-45-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:38:9-41:72
-46            android:name="com.sevenminuteworkout.FinishActivity"
-46-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:39:13-43
-47            android:screenOrientation="portrait"
-47-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:40:13-49
-48            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-48-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:41:13-69
-49    </application>
-50
-51</manifest>
+21-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:14:9-24:20
+22            android:name="com.sevenminuteworkout.MainActivity"
+22-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:15:13-41
+23            android:label="@string/app_name"
+23-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:16:13-45
+24            android:screenOrientation="portrait"
+24-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:17:13-49
+25            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+25-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:18:13-69
+26            <intent-filter>
+26-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:19:13-23:29
+27                <action android:name="android.intent.action.MAIN" />
+27-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:20:17-69
+27-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:20:25-66
+28
+29                <category android:name="android.intent.category.LAUNCHER" />
+29-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:22:17-77
+29-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:22:27-74
+30            </intent-filter>
+31        </activity>
+32        <activity
+32-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:26:9-29:72
+33            android:name="com.sevenminuteworkout.ExerciseActivity"
+33-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:27:13-45
+34            android:screenOrientation="portrait"
+34-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:28:13-49
+35            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+35-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:29:13-69
+36
+37        <!--
+38        This tag is already added by default when you create an activity along with the layout file.
+39        You just need add some extra attribute as per requirement.
+40        -->
+41        <activity
+41-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:33:9-36:72
+42            android:name="com.sevenminuteworkout.FinishActivity"
+42-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:34:13-43
+43            android:screenOrientation="portrait"
+43-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:35:13-49
+44            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+44-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:36:13-69
+45
+46        <!--
+47        This tag is already added by default when you create an activity along with the layout file.
+48        You just need add some extra attribute as per requirement.
+49        -->
+50        <activity
+50-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:40:9-43:72
+51            android:name="com.sevenminuteworkout.BMIActivity"
+51-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:41:13-40
+52            android:screenOrientation="portrait"
+52-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:42:13-49
+53            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+53-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:43:13-69
+54    </application>
+55
+56</manifest>

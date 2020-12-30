@@ -11,10 +11,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".BMIActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -26,17 +22,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".ExerciseActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> <!-- TODO(Step 2 : Update the activity attribute as per requirement.) -->
-        <!-- START -->
-        <!--
-This tag is already added by default when you create an activity along with the layout file.
-        You just need add some extra attributes as per requirement.
-        -->
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <!--This tag is already added by default when you create an activity along with the layout file.
+        You just need add some extra attribute as per requirement.-->
         <activity
             android:name=".FinishActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <!--This tag is already added by default when you create an activity along with the layout file.
+        You just need add some extra attribute as per requirement.-->
+        <activity
+            android:name=".BMIActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
