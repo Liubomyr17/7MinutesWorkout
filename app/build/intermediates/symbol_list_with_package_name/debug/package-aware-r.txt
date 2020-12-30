@@ -1215,6 +1215,7 @@ id line1
 id line3
 id listMode
 id list_item
+id llBMI
 id llExerciseView
 id llRestView
 id llStart
@@ -1315,6 +1316,7 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id toolbar_bmi_activity
 id toolbar_exercise_activity
 id toolbar_finish_activity
 id top
@@ -1397,6 +1399,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_b_m_i
 layout activity_exercise
 layout activity_finish
 layout activity_main
