@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_exercise.*
 import java.util.*
 import kotlin.collections.ArrayList
@@ -28,8 +29,12 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener  {
 
     private var tts: TextToSpeech? = null // Variable for Text to Speech
 
+    private var player: MediaPlayer? = null // Created a varible for Media Player to use later.
+
+    // TODO(Step 1 : Declaring a variable of an adapter class to bind it to recycler view.)
     // START
-    private var player: MediaPlayer? = null
+    // Declaring an exerciseAdapter object which will be initialized later.
+    private var exerciseAdapter: ExerciseStatusAdapter? = null
     // END
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,8 +53,17 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener  {
         exerciseList = Constants.defaultExerciseList()
 
         setupRestView() // REST View is set in this function
+
+        // TODO(Step 3 : Calling the function where we have bound the adapter to recycler view to show the data in the UI.)
+        // START
+        // setting up the exercise recycler view
+        setupExerciseStatusRecyclerView()
+        // END
     }
 
+    /**
+     * Here is Destroy function we will reset the rest timer to initial if it is running.
+     */
     public override fun onDestroy() {
         if (restTimer != null) {
             restTimer!!.cancel()
@@ -69,11 +83,14 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener  {
         if(player != null){
             player!!.stop()
         }
-        // END
-
         super.onDestroy()
     }
 
+    /**
+     * This the TextToSpeech override function
+     *
+     * Called to signal the completion of the TextToSpeech engine initialization.
+     */
     override fun onInit(status: Int) {
 
         if (status == TextToSpeech.SUCCESS) {
@@ -89,8 +106,16 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener  {
         }
     }
 
+    /**
+     * Function is used to set the timer for REST.
+     */
     private fun setupRestView() {
 
+        /**
+         * Here the sound file is added in to "raw" folder in resources.
+         * And played using MediaPlayer. MediaPlayer class can be used to control playback
+         * of audio/video files and streams.
+         */
         try {
             val soundURI =
                 Uri.parse("android.resource://com.sevenminuteworkout/" + R.raw.press_start)
@@ -100,12 +125,15 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener  {
         } catch (e: Exception) {
             e.printStackTrace()
         }
-        // END
 
         // Here according to the view make it visible as this is Rest View so rest view is visible and exercise view is not.
         llRestView.visibility = View.VISIBLE
         llExerciseView.visibility = View.GONE
 
+        /**
+         * Here firstly we will check if the timer is running the and it is not null then cancel the running timer and start the new one.
+         * And set the progress to initial which is 0.
+         */
         if (restTimer != null) {
             restTimer!!.cancel()
             restProgress = 0
@@ -119,10 +147,20 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener  {
         setRestProgressBar()
     }
 
+    /**
+     * Function is used to set the progress of timer using the progress
+     */
     private fun setRestProgressBar() {
 
         progressBar.progress = restProgress // Sets the current progress to the specified value.
 
+        /**
+         * @param millisInFuture The number of millis in the future from the call
+         *   to {#start()} until the countdown is done and {#onFinish()}
+         *   is called.
+         * @param countDownInterval The interval along the way to receive
+         *   {#onTick(long)} callbacks.
+         */
         // Here we have started a timer of 10 seconds so the 10000 is milliseconds is 10 seconds and the countdown interval is 1 second so it 1000.
         restTimer = object : CountDownTimer(10000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
@@ -140,17 +178,27 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener  {
         }.start()
     }
 
+    /**
+     * Function is used to set the progress of timer using the progress for Exercise View.
+     */
     private fun setupExerciseView() {
 
         // Here according to the view make it visible as this is Exercise View so exercise view is visible and rest view is not.
         llRestView.visibility = View.GONE
         llExerciseView.visibility = View.VISIBLE
 
+        /**
+         * Here firstly we will check if the timer is running the and it is not null then cancel the running timer and start the new one.
+         * And set the progress to initial which is 0.
+         */
         if (exerciseTimer != null) {
             exerciseTimer!!.cancel()
             exerciseProgress = 0
         }
 
+        /**
+         * Here current exercise name and image is set to exercise view.
+         */
         ivImage.setImageResource(exerciseList!![currentExercisePosition].getImage())
         tvExerciseName.text = exerciseList!![currentExercisePosition].getName()
 
@@ -159,6 +207,9 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener  {
         setExerciseProgressBar()
     }
 
+    /**
+     * Function is used to set the progress of timer using the progress for Exercise View for 30 Seconds
+     */
     private fun setExerciseProgressBar() {
 
         progressBarExercise.progress = exerciseProgress
@@ -185,7 +236,30 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener  {
         }.start()
     }
 
+    /**
+     * Function is used to speak the text that we pass to it.
+     */
     private fun speakOut(text: String) {
         tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null, "")
     }
+
+    /**
+     * Function is used to set up the recycler view to UI and asining the Layout Manager and Adapter Class is attached to it.
+     */
+    // TODO(Step 2 : Binding adapter class to recycler view and setting the recycler view layout manager and passing a list to the adapter.)
+    // START
+    private fun setupExerciseStatusRecyclerView() {
+
+        // Defining a layout manager for the recycle view
+        // Here we have used a LinearLayout Manager with horizontal scroll.
+        rvExerciseStatus.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
+        // As the adapter expects the exercises list and context so initialize it passing it.
+        exerciseAdapter = ExerciseStatusAdapter(exerciseList!!, this)
+
+        // Adapter class is attached to recycler view
+        rvExerciseStatus.adapter = exerciseAdapter
+    }
+    // END
 }

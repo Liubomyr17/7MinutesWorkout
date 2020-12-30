@@ -1061,7 +1061,7 @@ int drawable ic_wall_sit 0x7f07007f
 int drawable img_main_page 0x7f070080
 int drawable item_circular_color_accent_background 0x7f070081
 int drawable item_circular_color_accent_border 0x7f070082
-int drawable item_circular_color_grey_background 0x7f070083
+int drawable item_circular_color_gray_background 0x7f070083
 int drawable item_color_accent_border_ripple_background 0x7f070084
 int drawable mtrl_snackbar_background 0x7f070085
 int drawable mtrl_tabs_default_indicator 0x7f070086
