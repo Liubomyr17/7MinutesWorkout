@@ -12,13 +12,52 @@
         android:layout_height="?android:attr/actionBarSize"
         android:background="#FFFFFF" />
 
-    <!--TODO(Step 1 : Designing the METRIC UNIT VIEW in BMI calculator feature.)-->
+    <!--TODO(Step 1 : Adding radio selection for METRIC and US Units.)-->
     <!--START-->
+    <RadioGroup
+        android:id="@+id/rgUnits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_bmi_activity"
+        android:layout_margin="10dp"
+        android:background="@drawable/drawable_radio_group_tab_background"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbMetricUnits"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="0.50"
+            android:background="@drawable/drawable_units_tab_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="METRIC UNITS"
+            android:textColor="@drawable/drawable_units_tab_text_color_selector"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rbUsUnits"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="0.50"
+            android:background="@drawable/drawable_units_tab_selector"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="US UNITS"
+            android:textColor="@drawable/drawable_units_tab_text_color_selector"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RadioGroup>
+    <!--END-->
+
     <LinearLayout
         android:id="@+id/llUnitsView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar_bmi_activity"
+        android:layout_below="@id/rgUnits"
         android:orientation="vertical"
         android:padding="10dp">
 
@@ -41,8 +80,8 @@
             android:id="@+id/tilMetricUnitHeight"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/etMetricUnitHeight"
@@ -69,8 +108,9 @@
                 android:gravity="center"
                 android:text="YOUR BMI"
                 android:textAllCaps="true"
+                android:textSize="16sp"
                 android:visibility="invisible"
-                android:textSize="16sp" />
+                tools:visibility="visible"/>
 
             <TextView
                 android:id="@+id/tvBMIValue"
@@ -112,5 +152,4 @@
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
     </LinearLayout>
-    <!--END-->
 </RelativeLayout>

@@ -1042,6 +1042,9 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable drawable_radio_group_tab_background
+drawable drawable_units_tab_selector
+drawable drawable_units_tab_text_color_selector
 drawable ic_abdominal_crunch
 drawable ic_action_done
 drawable ic_high_knees_running_in_place
@@ -1253,6 +1256,9 @@ id progressBarExercise
 id progress_circular
 id progress_horizontal
 id radio
+id rbMetricUnits
+id rbUsUnits
+id rgUnits
 id right
 id right_icon
 id right_side
