@@ -1190,6 +1190,9 @@ id enterAlways
 id enterAlwaysCollapsed
 id etMetricUnitHeight
 id etMetricUnitWeight
+id etUsUnitHeightFeet
+id etUsUnitHeightInch
+id etUsUnitWeight
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1224,9 +1227,12 @@ id list_item
 id llBMI
 id llDiplayBMIResult
 id llExerciseView
+id llMetricUnitsView
 id llRestView
 id llStart
 id llUnitsView
+id llUsUnitsHeight
+id llUsUnitsView
 id masked
 id message
 id middle
@@ -1325,6 +1331,9 @@ id textinput_error
 id textinput_helper_text
 id tilMetricUnitHeight
 id tilMetricUnitWeight
+id tilUsUnitHeightFeet
+id tilUsUnitHeightInch
+id tilUsUnitWeight
 id time
 id title
 id titleDividerNoCustom
