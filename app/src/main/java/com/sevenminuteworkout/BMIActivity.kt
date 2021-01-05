@@ -11,16 +11,13 @@ import java.math.RoundingMode
 
 class BMIActivity : AppCompatActivity() {
 
-    // TODO(Step 2 : Added variables for METRIC and US UNITS views and a variable for displaying the current selected view..)
-    // START
     companion object {
         private const val METRIC_UNITS_VIEW = "METRIC_UNIT_VIEW" // Metric Unit View
         private const val US_UNITS_VIEW = "US_UNIT_VIEW" // US Unit View
     }
 
     private var currentVisibleView: String =
-            METRIC_UNITS_VIEW // A variable to hold a value to make a selected view visible
-    // END
+            METRIC_UNITS_VIEW // A variable to hold a value to make visible a selected view
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,24 +25,22 @@ class BMIActivity : AppCompatActivity() {
 
         setSupportActionBar(toolbar_bmi_activity)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true) //set back button
-        supportActionBar?.title = "CALCULATE BMI" // Setting a title in the action bar.
+        val actionbar = supportActionBar //actionbar
+        if (actionbar != null) {
+            actionbar.setDisplayHomeAsUpEnabled(true) //set back button
+            actionbar.title = "CALCULATE BMI" // Setting an title in the action bar.
+        }
 
         toolbar_bmi_activity.setNavigationOnClickListener {
             onBackPressed()
         }
 
-        // TODO(Step 5 : When the activity is launched make METRIC UNITS VIEW visible.)
-        // START
         makeVisibleMetricUnitsView()
-        // END
 
-        // TODO(Step 6 : Adding a check change listener to the radio group and according to the radio button.)
-        // START
         // Radio Group change listener is set to the radio group which is added in XML.
         rgUnits.setOnCheckedChangeListener { radioGroup: RadioGroup, checkedId: Int ->
 
-            // Here if the checkId is METRIC UNITS view then make the view visible else US UNITS view.
+            // Here is the checkId is METRIC UNITS view then make the view visible else US UNITS view.
             if (checkedId == R.id.rbMetricUnits) {
                 makeVisibleMetricUnitsView()
             } else {
@@ -57,30 +52,65 @@ class BMIActivity : AppCompatActivity() {
         // Button will calculate the input values in Metric Units
         btnCalculateUnits.setOnClickListener {
 
-            // The values are validated.
-            if (validateMetricUnits()) {
+            // TODO(Step 2 : Handling the current visible view and calculating US UNITS view input values if they are valid.)
+            // START
+            if (currentVisibleView == METRIC_UNITS_VIEW) {
+                // The values are validated.
+                if (validateMetricUnits()) {
 
-                // The height value is converted to float value and divided by 100 to convert it to meter.
-                val heightValue: Float = etMetricUnitHeight.text.toString().toFloat() / 100
+                    // The height value is converted to float value and divided by 100 to convert it to meter.
+                    val heightValue: Float = etMetricUnitHeight.text.toString().toFloat() / 100
 
-                // The weight value is converted to float value
-                val weightValue: Float = etMetricUnitWeight.text.toString().toFloat()
+                    // The weight value is converted to float value
+                    val weightValue: Float = etMetricUnitWeight.text.toString().toFloat()
 
-                // BMI value is calculated in METRIC UNITS using the height and weight value.
-                val bmi = weightValue / (heightValue * heightValue)
+                    // BMI value is calculated in METRIC UNITS using the height and weight value.
+                    val bmi = weightValue / (heightValue * heightValue)
 
-                displayBMIResult(bmi)
+                    displayBMIResult(bmi)
+                } else {
+                    Toast.makeText(
+                            this@BMIActivity,
+                            "Please enter valid values.",
+                            Toast.LENGTH_SHORT
+                    )
+                            .show()
+                }
             } else {
-                Toast.makeText(this@BMIActivity, "Please enter valid values.", Toast.LENGTH_SHORT)
-                        .show()
+
+                // The values are validated.
+                if (validateUsUnits()) {
+
+                    val usUnitHeightValueFeet: String =
+                            etUsUnitHeightFeet.text.toString() // Height Feet value entered in EditText component.
+                    val usUnitHeightValueInch: String =
+                            etUsUnitHeightInch.text.toString() // Height Inch value entered in EditText component.
+                    val usUnitWeightValue: Float = etUsUnitWeight.text.toString()
+                            .toFloat() // Weight value entered in EditText component.
+
+                    // Here the Height Feet and Inch values are merged and multiplied by 12 for converting it to inches.
+                    val heightValue =
+                            usUnitHeightValueInch.toFloat() + usUnitHeightValueFeet.toFloat() * 12
+
+                    // This is the Formula for US UNITS result.
+                    // Reference Link : https://www.cdc.gov/healthyweight/assessing/bmi/childrens_bmi/childrens_bmi_formula.html
+                    val bmi = 703 * (usUnitWeightValue / (heightValue * heightValue))
+
+                    displayBMIResult(bmi) // Displaying the result into UI
+                } else {
+                    Toast.makeText(
+                            this@BMIActivity,
+                            "Please enter valid values.",
+                            Toast.LENGTH_SHORT
+                    )
+                            .show()
+                }
             }
         }
     }
 
-    // TODO(Step 3 : Making a function to make the METRIC UNITS view visible.)
-    // START
     /**
-     * Function is used to make the METRIC UNITS VIEW visible and hide the US UNITS VIEW.
+     * Function is used to make  the METRIC UNITS VIEW visible and hide the US UNITS VIEW.
      */
     private fun makeVisibleMetricUnitsView() {
         currentVisibleView = METRIC_UNITS_VIEW // Current View is updated here.
@@ -95,18 +125,18 @@ class BMIActivity : AppCompatActivity() {
         tvBMIType.visibility = View.INVISIBLE // Result is cleared and the labels are hidden
         tvBMIDescription.visibility = View.INVISIBLE // Result is cleared and the labels are hidden
     }
-    // END
 
-    // TODO(Step 4 : Making a function to make the US UNITS view visible.)
-    // START
+    /**
+     * Function is used to make visible the US UNITS VIEW and hide the METRIC UNITS VIEW.
+     */
     private fun makeVisibleUsUnitsView() {
         currentVisibleView = US_UNITS_VIEW // Current View is updated here.
         llMetricUnitsView.visibility = View.GONE // METRIC UNITS VIEW is hidden
         llUsUnitsView.visibility = View.VISIBLE // US UNITS VIEW is Visible
 
-        etUsUnitWeight.text!!.clear() // weight value is cleared.
-        etUsUnitHeightFeet.text!!.clear() // height feet value is cleared.
-        etUsUnitHeightInch.text!!.clear() // height inch is cleared.
+        etUsUnitWeight.text!!.clear() // weight value is cleared if it is added.
+        etUsUnitHeightFeet.text!!.clear() // height feet value is cleared if it is added.
+        etUsUnitHeightInch.text!!.clear() // height inch is cleared if it is added.
 
         tvYourBMI.visibility = View.INVISIBLE // Result is cleared and the labels are hidden
         tvBMIValue.visibility = View.INVISIBLE // Result is cleared and the labels are hidden
@@ -129,6 +159,26 @@ class BMIActivity : AppCompatActivity() {
 
         return isValid
     }
+
+    // TODO(Step 1 : Validating the US UNITS view input values.)
+    // START
+    /**
+     * Function is used to validate the input values for US UNITS.
+     */
+    private fun validateUsUnits(): Boolean {
+        var isValid = true
+
+        if (etUsUnitWeight.text.toString().isEmpty()) {
+            isValid = false
+        } else if (etUsUnitHeightFeet.text.toString().isEmpty()) {
+            isValid = false
+        } else if (etUsUnitHeightInch.text.toString().isEmpty()) {
+            isValid = false
+        }
+
+        return isValid
+    }
+    // END
 
     /**
      * Function is used to display the result of METRIC UNITS.
