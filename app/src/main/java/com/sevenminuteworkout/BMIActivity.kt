@@ -25,11 +25,8 @@ class BMIActivity : AppCompatActivity() {
 
         setSupportActionBar(toolbar_bmi_activity)
 
-        val actionbar = supportActionBar //actionbar
-        if (actionbar != null) {
-            actionbar.setDisplayHomeAsUpEnabled(true) //set back button
-            actionbar.title = "CALCULATE BMI" // Setting an title in the action bar.
-        }
+        supportActionBar?.setDisplayHomeAsUpEnabled(true) //set back button
+        supportActionBar?.title = "CALCULATE BMI" // Setting an title in the action bar.
 
         toolbar_bmi_activity.setNavigationOnClickListener {
             onBackPressed()
@@ -47,21 +44,18 @@ class BMIActivity : AppCompatActivity() {
                 makeVisibleUsUnitsView()
             }
         }
-        // END
 
         // Button will calculate the input values in Metric Units
         btnCalculateUnits.setOnClickListener {
 
-            // TODO(Step 2 : Handling the current visible view and calculating US UNITS view input values if they are valid.)
-            // START
-            if (currentVisibleView == METRIC_UNITS_VIEW) {
+            if (currentVisibleView.equals(METRIC_UNITS_VIEW)) {
                 // The values are validated.
                 if (validateMetricUnits()) {
 
-                    // The height value is converted to float value and divided by 100 to convert it to meter.
+                    // The height value in converted to float value and divided by 100 to convert it to meter.
                     val heightValue: Float = etMetricUnitHeight.text.toString().toFloat() / 100
 
-                    // The weight value is converted to float value
+                    // The weight value in converted to float value
                     val weightValue: Float = etMetricUnitWeight.text.toString().toFloat()
 
                     // BMI value is calculated in METRIC UNITS using the height and weight value.
@@ -110,7 +104,7 @@ class BMIActivity : AppCompatActivity() {
     }
 
     /**
-     * Function is used to make  the METRIC UNITS VIEW visible and hide the US UNITS VIEW.
+     * Function is used to make visible the METRIC UNITS VIEW and hide the US UNITS VIEW.
      */
     private fun makeVisibleMetricUnitsView() {
         currentVisibleView = METRIC_UNITS_VIEW // Current View is updated here.
@@ -160,8 +154,6 @@ class BMIActivity : AppCompatActivity() {
         return isValid
     }
 
-    // TODO(Step 1 : Validating the US UNITS view input values.)
-    // START
     /**
      * Function is used to validate the input values for US UNITS.
      */
@@ -178,7 +170,6 @@ class BMIActivity : AppCompatActivity() {
 
         return isValid
     }
-    // END
 
     /**
      * Function is used to display the result of METRIC UNITS.

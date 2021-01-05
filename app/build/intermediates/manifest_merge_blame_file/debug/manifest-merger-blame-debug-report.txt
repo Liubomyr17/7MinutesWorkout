@@ -11,7 +11,7 @@
 9-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:6:5-44:19
+11-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:6:5-54:19
 12        android:allowBackup="false"
 12-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:7:9-36
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -83,6 +83,22 @@
 52-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:42:13-49
 53            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 53-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:43:13-69
-54    </application>
-55
-56</manifest>
+54
+55        <!-- TODO(Step 3 : Modifying the attributes for the History Screen Activity.) -->
+56        <!-- START -->
+57        <!--
+58        This tag is already added by default when you create an activity along with the layout file.
+59        You just need to add some extra attributes as per requirement.
+60        -->
+61        <activity
+61-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:49:9-52:72
+62            android:name="com.sevenminuteworkout.HistoryActivity"
+62-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:50:13-44
+63            android:screenOrientation="portrait"
+63-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:51:13-49
+64            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+64-->D:\AndroidProjects\7MinutesWorkout\app\src\main\AndroidManifest.xml:52:13-69
+65        <!-- END -->
+66    </application>
+67
+68</manifest>

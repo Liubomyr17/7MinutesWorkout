@@ -58,9 +58,6 @@
         android:orientation="vertical"
         android:padding="10dp">
 
-        <!--TODO(Step 1 : Designing the US UNITS view. And also update some design i.e Add the MetricUnitsView in one linear layout and USUnitsView in another.)-->
-        <!--START-->
-
         <LinearLayout
             android:id="@+id/llMetricUnitsView"
             android:layout_width="match_parent"
@@ -170,7 +167,6 @@
 
             </LinearLayout>
         </LinearLayout>
-        <!--END-->
 
         <LinearLayout
             android:id="@+id/llDiplayBMIResult"
@@ -188,8 +184,8 @@
                 android:gravity="center"
                 android:text="YOUR BMI"
                 android:textAllCaps="true"
-                android:textSize="16sp"
-                android:visibility="invisible" />
+                android:visibility="invisible"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tvBMIValue"

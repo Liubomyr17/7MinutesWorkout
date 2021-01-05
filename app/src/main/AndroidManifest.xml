@@ -41,6 +41,16 @@
             android:name=".BMIActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <!--TODO(Step 3 : Modifying the attributes for the History Screen Activity.)-->
+        <!--START-->
+        <!--This tag is already added by default when you create an activity along with the layout file.
+        You just need to add some extra attributes as per requirement.-->
+        <activity
+            android:name=".HistoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <!--END-->
     </application>
 
 </manifest>
