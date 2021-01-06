@@ -28,13 +28,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // TODO(Step 6 : Adding a click event to launch the History Screen Activity from Main Activity.)
-        // START
         llHistory.setOnClickListener {
             // Launching the History Activity
             val intent = Intent(this, HistoryActivity::class.java)
             startActivity(intent)
         }
-        //END
     }
 }

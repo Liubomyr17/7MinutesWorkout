@@ -24,7 +24,6 @@ class BMIActivity : AppCompatActivity() {
         setContentView(R.layout.activity_bmi)
 
         setSupportActionBar(toolbar_bmi_activity)
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true) //set back button
         supportActionBar?.title = "CALCULATE BMI" // Setting an title in the action bar.
 

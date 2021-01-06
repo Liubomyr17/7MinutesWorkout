@@ -43,11 +43,6 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!--TODO(Step 1 : Adding a Button for Launching the History Screen.)-->
-    <!--START-->
-    <!--Here we have done some design improvements
-    Two let both buttons look better i.e BMI Calculator and History.
-    And Calendar icon is added in the Drawables folder.-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -122,5 +117,4 @@
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
-    <!--END-->
 </LinearLayout>

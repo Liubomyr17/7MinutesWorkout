@@ -1,0 +1,79 @@
+package com.sevenminuteworkout
+
+import android.content.ContentValues
+import android.content.Context
+import android.database.sqlite.SQLiteDatabase
+import android.database.sqlite.SQLiteOpenHelper
+
+// TODO(Step 1 : Creating the database for Inserting the date of completion of the 7 minute workout.)
+// START
+/**
+ * Create a helper object to create, open, and/or manage a database.
+ * This method always returns very quickly.  The database is not actually
+ * created or opened until one of getWritableDatabase or
+ * getReadableDatabase is called.
+ *
+ * @param context to use for locating paths to the the database
+ * @param name of the database file, or null for an in-memory database
+ * @param factory to use for creating cursor objects, or null for the default
+ * @param version number of the database (starting at 1); if the database is older,
+ *     #onUpgrade will be used to upgrade the database; if the database is
+ *     newer, #onDowngrade will be used to downgrade the database
+ */
+class SqliteOpenHelper(
+    context: Context,
+    factory: SQLiteDatabase.CursorFactory?
+) :
+    SQLiteOpenHelper(
+        context, DATABASE_NAME,
+        factory, DATABASE_VERSION
+    ) {
+
+    /**
+     * This override function is used to execute when the class is called once where the database tables are created.
+     */
+    override fun onCreate(db: SQLiteDatabase) {
+        val CREATE_HISTORY_TABLE = ("CREATE TABLE " +
+                TABLE_HISTORY + "("
+                + COLUMN_ID + " INTEGER PRIMARY KEY," +
+                COLUMN_COMPLETED_DATE
+                + " TEXT)") // Create History Table Query.
+        db.execSQL(CREATE_HISTORY_TABLE) // Executing the create table query.
+    }
+
+    /**
+     * This function is called when the database version is changed.
+     */
+    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
+        db.execSQL("DROP TABLE IF EXISTS $TABLE_HISTORY") // It drops the existing history table
+        onCreate(db) // Calls the onCreate function so all the updated tables will be created.
+    }
+
+    // TODO(Step 3 : Creating a function where the passed Date will be inserted into the Database Table.)
+    // START
+    /**
+     * Function is used to insert the date in Database History table.
+     */
+    fun addDate(date: String) {
+        val values =
+            ContentValues() // Creates an empty set of values using the default initial size
+        values.put(
+            COLUMN_COMPLETED_DATE,
+            date
+        ) // Putting the value to the column along with the value.
+        val db =
+            this.writableDatabase // Create and/or open a database that will be used for reading and writing.
+        db.insert(TABLE_HISTORY, null, values) // Insert query is return
+        db.close() // Database is closed after insertion.
+    }
+    // END
+
+    companion object {
+        private const val DATABASE_VERSION = 1 // This DATABASE Version
+        private const val DATABASE_NAME = "SevenMinutesWorkout.db" // Name of the DATABASE
+        private const val TABLE_HISTORY = "history" // Table Name
+        private const val COLUMN_ID = "_id" // Column Id
+        private const val COLUMN_COMPLETED_DATE = "completed_date" // Column for Completed Date
+    }
+}
+// END
