@@ -25,20 +25,15 @@ class FinishActivity : AppCompatActivity() {
             finish()
         }
 
-        // TODO(Step 4 : Calling the function to insert the date into the database.)
-        // START
         addDateToDatabase()
-        // END
     }
 
-    // TODO(Step 2 : Creating the database and Inserting the date of Completion of the Exercise.)
-    // START
     /**
      * Function is used to insert the current system date in the sqlite database.
      */
     private fun addDateToDatabase() {
 
-        val c = Calendar.getInstance() // Calendars Current Instance
+        val c = Calendar.getInstance() // Calender Current Instance
         val dateTime = c.time // Current Date and Time of the system.
         Log.e("Date : ", "" + dateTime) // Printed in the log.
 
@@ -59,5 +54,4 @@ class FinishActivity : AppCompatActivity() {
         dbHandler.addDate(date) // Add date function is called.
         Log.e("Date : ", "Added...") // Printed in log which is printed if the complete execution is done.
     }
-    //END
 }

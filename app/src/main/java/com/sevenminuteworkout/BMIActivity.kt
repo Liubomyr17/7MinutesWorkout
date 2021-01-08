@@ -17,7 +17,7 @@ class BMIActivity : AppCompatActivity() {
     }
 
     private var currentVisibleView: String =
-            METRIC_UNITS_VIEW // A variable to hold a value to make visible a selected view
+        METRIC_UNITS_VIEW // A variable to hold a value to make visible a selected view
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,11 +63,11 @@ class BMIActivity : AppCompatActivity() {
                     displayBMIResult(bmi)
                 } else {
                     Toast.makeText(
-                            this@BMIActivity,
-                            "Please enter valid values.",
-                            Toast.LENGTH_SHORT
+                        this@BMIActivity,
+                        "Please enter valid values.",
+                        Toast.LENGTH_SHORT
                     )
-                            .show()
+                        .show()
                 }
             } else {
 
@@ -75,15 +75,15 @@ class BMIActivity : AppCompatActivity() {
                 if (validateUsUnits()) {
 
                     val usUnitHeightValueFeet: String =
-                            etUsUnitHeightFeet.text.toString() // Height Feet value entered in EditText component.
+                        etUsUnitHeightFeet.text.toString() // Height Feet value entered in EditText component.
                     val usUnitHeightValueInch: String =
-                            etUsUnitHeightInch.text.toString() // Height Inch value entered in EditText component.
+                        etUsUnitHeightInch.text.toString() // Height Inch value entered in EditText component.
                     val usUnitWeightValue: Float = etUsUnitWeight.text.toString()
-                            .toFloat() // Weight value entered in EditText component.
+                        .toFloat() // Weight value entered in EditText component.
 
                     // Here the Height Feet and Inch values are merged and multiplied by 12 for converting it to inches.
                     val heightValue =
-                            usUnitHeightValueInch.toFloat() + usUnitHeightValueFeet.toFloat() * 12
+                        usUnitHeightValueInch.toFloat() + usUnitHeightValueFeet.toFloat() * 12
 
                     // This is the Formula for US UNITS result.
                     // Reference Link : https://www.cdc.gov/healthyweight/assessing/bmi/childrens_bmi/childrens_bmi_formula.html
@@ -92,11 +92,11 @@ class BMIActivity : AppCompatActivity() {
                     displayBMIResult(bmi) // Displaying the result into UI
                 } else {
                     Toast.makeText(
-                            this@BMIActivity,
-                            "Please enter valid values.",
-                            Toast.LENGTH_SHORT
+                        this@BMIActivity,
+                        "Please enter valid values.",
+                        Toast.LENGTH_SHORT
                     )
-                            .show()
+                        .show()
                 }
             }
         }
@@ -136,7 +136,6 @@ class BMIActivity : AppCompatActivity() {
         tvBMIType.visibility = View.INVISIBLE // Result is cleared and the labels are hidden
         tvBMIDescription.visibility = View.INVISIBLE // Result is cleared and the labels are hidden
     }
-    // END
 
     /**
      * Function is used to validate the input values for METRIC UNITS.
@@ -182,44 +181,44 @@ class BMIActivity : AppCompatActivity() {
             bmiLabel = "Very severely underweight"
             bmiDescription = "Oops! You really need to take care of your better! Eat more!"
         } else if (java.lang.Float.compare(bmi, 15f) > 0 && java.lang.Float.compare(
-                        bmi,
-                        16f
-                ) <= 0
+                bmi,
+                16f
+            ) <= 0
         ) {
             bmiLabel = "Severely underweight"
             bmiDescription = "Oops! You really need to take care of your better! Eat more!"
         } else if (java.lang.Float.compare(bmi, 16f) > 0 && java.lang.Float.compare(
-                        bmi,
-                        18.5f
-                ) <= 0
+                bmi,
+                18.5f
+            ) <= 0
         ) {
             bmiLabel = "Underweight"
             bmiDescription = "Oops! You really need to take care of your better! Eat more!"
         } else if (java.lang.Float.compare(bmi, 18.5f) > 0 && java.lang.Float.compare(
-                        bmi,
-                        25f
-                ) <= 0
+                bmi,
+                25f
+            ) <= 0
         ) {
             bmiLabel = "Normal"
             bmiDescription = "Congratulations! You are in a good shape!"
         } else if (java.lang.Float.compare(bmi, 25f) > 0 && java.lang.Float.compare(
-                        bmi,
-                        30f
-                ) <= 0
+                bmi,
+                30f
+            ) <= 0
         ) {
             bmiLabel = "Overweight"
             bmiDescription = "Oops! You really need to take care of your yourself! Workout maybe!"
         } else if (java.lang.Float.compare(bmi, 30f) > 0 && java.lang.Float.compare(
-                        bmi,
-                        35f
-                ) <= 0
+                bmi,
+                35f
+            ) <= 0
         ) {
             bmiLabel = "Obese Class | (Moderately obese)"
             bmiDescription = "Oops! You really need to take care of your yourself! Workout maybe!"
         } else if (java.lang.Float.compare(bmi, 35f) > 0 && java.lang.Float.compare(
-                        bmi,
-                        40f
-                ) <= 0
+                bmi,
+                40f
+            ) <= 0
         ) {
             bmiLabel = "Obese Class || (Severely obese)"
             bmiDescription = "OMG! You are in a very dangerous condition! Act now!"

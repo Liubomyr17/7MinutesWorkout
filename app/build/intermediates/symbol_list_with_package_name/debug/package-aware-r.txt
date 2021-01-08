@@ -1235,6 +1235,7 @@ id llStart
 id llUnitsView
 id llUsUnitsHeight
 id llUsUnitsView
+id ll_history_item_main
 id masked
 id message
 id middle
@@ -1271,6 +1272,7 @@ id right
 id right_icon
 id right_side
 id rvExerciseStatus
+id rvHistory
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1358,8 +1360,11 @@ id tvBMIValue
 id tvEnd
 id tvExerciseName
 id tvExerciseTimer
+id tvHistory
 id tvItem
 id tvNo
+id tvNoDataAvailable
+id tvPosition
 id tvTimer
 id tvUpcomingExerciseName
 id tvYes
@@ -1450,6 +1455,7 @@ layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout dialog_custom_back_confirmation
 layout item_exercise_status
+layout item_history_row
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
