@@ -92,8 +92,16 @@
         "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\drawable\\ic_lunge.png"
     },
     {
+        "merged": "D:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_i2.PNG.flat",
+        "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\drawable-anydpi\\i2.PNG"
+    },
+    {
         "merged": "D:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_done.xml.flat",
         "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\drawable-anydpi\\ic_action_done.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_i5.PNG.flat",
+        "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\drawable-anydpi\\i5.PNG"
     },
     {
         "merged": "D:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_exercise.xml.flat",
@@ -130,6 +138,14 @@
     {
         "merged": "D:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circular_progress_bar.xml.flat",
         "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\drawable\\circular_progress_bar.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_i4.PNG.flat",
+        "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\drawable-anydpi\\i4.PNG"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_i1.PNG.flat",
+        "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\drawable-anydpi\\i1.PNG"
     },
     {
         "merged": "D:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\res\\merged\\debug\\drawable_item_circular_color_accent_background.xml.flat",
@@ -196,6 +212,10 @@
         "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\drawable\\circular_progress_gray.xml"
     },
     {
+        "merged": "D:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_i3.PNG.flat",
+        "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\drawable-anydpi\\i3.PNG"
+    },
+    {
         "merged": "D:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\res\\merged\\debug\\drawable_item_circular_color_gray_background.xml.flat",
         "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\drawable\\item_circular_color_gray_background.xml"
     },
@@ -222,5 +242,9 @@
     {
         "merged": "D:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_i0.PNG.flat",
+        "source": "D:\\AndroidProjects\\7MinutesWorkout\\app\\src\\main\\res\\drawable-anydpi\\i0.PNG"
     }
 ]

@@ -1,4 +1,4 @@
-#Fri Jan 08 16:58:15 EET 2021
+#Fri Jan 08 17:05:51 EET 2021
 base.0=D\:\\AndroidProjects\\7MinutesWorkout\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

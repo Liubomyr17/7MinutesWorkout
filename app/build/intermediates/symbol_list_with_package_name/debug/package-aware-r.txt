@@ -1045,6 +1045,12 @@ drawable design_snackbar_background
 drawable drawable_radio_group_tab_background
 drawable drawable_units_tab_selector
 drawable drawable_units_tab_text_color_selector
+drawable i0
+drawable i1
+drawable i2
+drawable i3
+drawable i4
+drawable i5
 drawable ic_abdominal_crunch
 drawable ic_action_done
 drawable ic_calendar
