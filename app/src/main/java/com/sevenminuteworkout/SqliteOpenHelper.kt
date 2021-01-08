@@ -68,6 +68,20 @@ class SqliteOpenHelper(
     }
     // END
 
+    fun getAllCompletedDatesList() : ArrayList<String> {
+        val list = ArrayList<String>()
+        val db = this.readableDatabase
+        val cursor = db.rawQuery("SELECT * FROM $TABLE_HISTORY", null)
+
+        while (cursor.moveToNext()) {
+            val dateValue = (cursor.getString(cursor.getColumnIndex(COLUMN_COMPLETED_DATE)))
+            list.add(dateValue)
+        }
+        cursor.close()
+        return list
+    }
+
+
     companion object {
         private const val DATABASE_VERSION = 1 // This DATABASE Version
         private const val DATABASE_NAME = "SevenMinutesWorkout.db" // Name of the DATABASE
